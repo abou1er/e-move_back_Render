@@ -5,10 +5,20 @@ const port = process.env.PORT || API_PORT;
 const express = require('express');
 let app = express(); // création de l'objet représentant notre application express
 
+const http = require('http');
+const server = http.createServer(app)   //a voir 54sec faire appbis
+
+
 // server listening 
-app.listen(port, () => {
+// app.listen(port, () => {
+//     console.log('Server running on port', port);
+// });
+
+// server listening bis
+server.listen(port, () => {
     console.log('Server running on port', port);
 });
+
 
 
 
